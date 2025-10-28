@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Officer Project Calculator — Essence Stone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-overlay"></div>
+
+  <div class="container">
+    <header>
+      <a class="back-btn" href="index.html" title="Kembali ke Halaman Awal">✖</a>
+      <div class="title">Officer Project Calculator — Essence Stone</div>
+      <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+    </header>
+
+    <main class="card" role="main">
+      <section>
+        <h2 style="text-align:center;margin-bottom:0.75rem;font-size:1.05rem">
+          Officer Project Calculator
+        </h2>
+
+        <div class="table-wrap">
+          <table role="table" aria-label="Officer Project calculator table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Point</th>
+                <th>Amount</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="calcTable">
+              <tr><td>Use 1 Rare Hero Shard(s)</td><td data-point>350</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Use 1 Epic Hero Shard(s)</td><td data-point>1220</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Use 1 Mythic Hero Shard(s)</td><td data-point>3040</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Use 1 Hero Gear Essence Stone(s)</td><td data-point>6000</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Use 1 Widget(s) Exclusive Gear</td><td data-point>12000</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Use 1 Mithril</td><td data-point>216000</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+
+              <tr class="section-title"><td colspan="4">——— Troops Training ———</td></tr>
+              <tr><td>Train Lv.1 Troops</td><td data-point>1</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.2 Troops</td><td data-point>2</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.3 Troops</td><td data-point>3</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.4 Troops</td><td data-point>4</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.5 Troops</td><td data-point>6</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.6 Troops</td><td data-point>9</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.7 Troops</td><td data-point>12</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.8 Troops</td><td data-point>17</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.9 Troops</td><td data-point>22</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.10 Troops</td><td data-point>30</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+              <tr><td>Train Lv.11 Troops</td><td data-point>37</td><td><input type="number" min="0" class="amountInput" value="0"></td><td class="totalCell">0</td></tr>
+
+              <tr class="section-title"><td colspan="4">——— Troops Promotion ———</td></tr>
+              <tr>
+                <td>
+                  <div class="promotion-select">
+                    <select class="fromLvl">
+                      <option value="1">Lv.1</option><option value="2">Lv.2</option><option value="3">Lv.3</option><option value="4">Lv.4</option><option value="5">Lv.5</option><option value="6">Lv.6</option><option value="7">Lv.7</option><option value="8">Lv.8</option><option value="9">Lv.9</option><option value="10">Lv.10</option>
+                    </select>
+                    →
+                    <select class="toLvl">
+                      <option value="2">Lv.2</option><option value="3">Lv.3</option><option value="4">Lv.4</option><option value="5">Lv.5</option><option value="6">Lv.6</option><option value="7">Lv.7</option><option value="8">Lv.8</option><option value="9">Lv.9</option><option value="10">Lv.10</option><option value="11">Lv.11</option>
+                    </select>
+                  </div>
+                </td>
+                <td class="diffCell">0</td>
+                <td><input type="number" min="0" class="amountInput promoAmount" value="0"></td>
+                <td class="totalCell">0</td>
+              </tr>
+
+              <tr class="total-row">
+                <td colspan="4">
+                  <span class="total-pill">TOTAL : <span class="total-amount" id="grandTotal">0</span></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <button id="resetBtn" class="reset-btn">Reset Total</button>
+    </main>
+
+    <footer>© 2025 Without Survival. All Rights Reserved.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
