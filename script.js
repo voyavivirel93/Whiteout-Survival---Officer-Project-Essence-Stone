@@ -72,6 +72,22 @@
     localStorage.setItem('officerCalc', JSON.stringify(state));
   }
 
+  // ===== alert button replaces the × button ===== //
+  document.addEventListener('DOMContentLoaded', () => {
+  const backBtn = document.querySelector('.back-btn');
+  
+  backBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // cegah pindah halaman
+    alert('Gunakan tombol "Reset Total" untuk menghapus semua nilai!\n\nTombol 🔍 hanya sebagai informasi.');
+  });
+});
+  
+  // ===== automatically minimize page ===== //
+  document.addEventListener('DOMContentLoaded', () => {
+  // Atur zoom halaman ke 60% saat pertama kali halaman dimuat
+  document.body.style.zoom = "0.6";
+});
+  
   // ===== EVENTS =====
   inputs.forEach(i=>i.addEventListener('input', updateTotals));
   [promoFrom, promoTo].forEach(s=>s.addEventListener('change', updateTotals));
